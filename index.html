@@ -6,33 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+       
+        .board{
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.button{
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    font-size: 50px;
+    text-align: center;
+    line-height: 95px;
+    cursor: pointer;
+    user-select: none;
+}
+.button:nth-child(3n){
+    border-right: none;
+}
+.button:nth-child(n+7){
+    border-bottom: none;
+}
+    </style>
 </head>
-<body>
-    <div class="text-center">
+<body style="background-image:url();  background-repeat: no-repeat; background-size: cover;" class="w-100 ">
+    <!-- <div class="text-center">
         <p >Jeu Tic Tac Toe </p><br>
         <p>player X</p>
         <p>player O</p>
+        <div id="won"></div> -->
 
-    </div>
-    <div class="container">
-        <div class="row">
-                    <input  class="col " >
-                    <input  class="col" >
-                  <input  class="col" >
-           
+    </div><br><br>
+    <div class="d-flex justify-content-center align-content-center w-100" >
+        <div class="board p-3 rounded" style="background-image:url();  background-repeat: no-repeat; background-size: cover;">
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
         </div>
-        <div class="row">
-            <input  class="col" >
-            <input  class="col" >
-            <input  class="col" >
-          </div>
-          <div class="row">
-            <input  class="col" >
-            <input  class="col" >
-            <input  class="col" >
-          </div>
       </div>
 
 
 </body>
+<script src="script.js"> </script>
 </html>
