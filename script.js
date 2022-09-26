@@ -5,6 +5,7 @@ let jouer2 =document.getElementById("jouer2");
 let player =document.querySelector(".player");
 let winner =document.querySelector(".winner");
 let currentPlayer = "X";
+let checkwinner = 0
 letlistWining = [
     [0,1,2],
     [3,4,5],
@@ -25,15 +26,12 @@ function theWinner(currentPlayer){
             if(currentPlayer == "X" ){
                   
                       winner.innerText=  `winner ` + " " + localStorage.getItem("player1")
-                 
-                      
-                    
-
-                   
+checkwinner =1;
             }else{
                       winner.innerText=  `winner ` + ` ` + localStorage.getItem("player2")
-                   
-            }             
+                   checkwinner=1
+            } 
+                    
         }
     })
 }
@@ -46,9 +44,13 @@ buttons.forEach(function(button ){
             localStorage.setItem("player1",jouer1.value);
             localStorage.setItem("player2",jouer2.value);
             let b=0
-      
+
+      if(checkwinner==0){
                 b = button.innerText = currentPlayer; 
-        
+            } else{
+
+                console.log('nothing') 
+            }
         
             if(currentPlayer == "X" ){
                 currentPlayer = "O" ;
@@ -69,6 +71,7 @@ buttons.forEach(function(button ){
 })
   
 }
+
 game();
 
 
