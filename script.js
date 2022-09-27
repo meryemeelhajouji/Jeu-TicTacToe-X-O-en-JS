@@ -25,10 +25,10 @@ function theWinner(currentPlayer){
         if(check){
             if(currentPlayer == "X" ){
                   
-                      winner.innerText=  `winner ` + " " + localStorage.getItem("player1")
+                      winner.innerText=  `the winner is ` + " " + localStorage.getItem("player1")
 checkwinner =1;
             }else{
-                      winner.innerText=  `winner ` + ` ` + localStorage.getItem("player2")
+                      winner.innerText=  `the winner is ` + ` ` + localStorage.getItem("player2")
                    checkwinner=1
             } 
                     
@@ -45,12 +45,15 @@ buttons.forEach(function(button ){
             localStorage.setItem("player2",jouer2.value);
             let b=0
 
-      if(checkwinner==0){
+    
+      if(checkwinner==0 ){
                 b = button.innerText = currentPlayer; 
+               
             } else{
-
+               
                 console.log('nothing') 
             }
+
         
             if(currentPlayer == "X" ){
                 currentPlayer = "O" ;
